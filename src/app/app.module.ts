@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatIconModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent],
