@@ -19,30 +19,16 @@
             <textarea matInput placeholder="Leave a comment" cdkDrag></textarea>
             <br>
     </mat-sidenav>
-    <mat-sidenav-content class="example-boundary">
-        <mat-grid-list cols="10" rowHeight="2:1">
-            <textarea matInput placeholder="Leave a comment" cdkDrag></textarea>
-            <mat-grid-tile>1</mat-grid-tile>
-            <mat-grid-tile>2</mat-grid-tile>
-            <mat-grid-tile>3</mat-grid-tile>
-            <mat-grid-tile>4</mat-grid-tile>
-            <mat-grid-tile>5</mat-grid-tile>
-            <mat-grid-tile>6</mat-grid-tile>
-            <mat-grid-tile>7</mat-grid-tile>
-            <mat-grid-tile>8</mat-grid-tile>
-            <mat-grid-tile>9</mat-grid-tile>
-            <mat-grid-tile>10</mat-grid-tile>
-            <mat-grid-tile>11</mat-grid-tile>
-            <mat-grid-tile>12</mat-grid-tile>
-            <mat-grid-tile>13</mat-grid-tile>
-            <mat-grid-tile>14</mat-grid-tile>
-            <mat-grid-tile>15</mat-grid-tile>
-            <mat-grid-tile>16</mat-grid-tile>
-            <mat-grid-tile>17</mat-grid-tile>
-            <mat-grid-tile>18</mat-grid-tile>
-            <mat-grid-tile>19</mat-grid-tile>
-            <mat-grid-tile>20</mat-grid-tile>
-          </mat-grid-list>
+    <mat-sidenav-content>
+        <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let movie of movies" cdkDrag>
+                {{movie.type}}
+            <table>
+                <tr><td><span>aaa</span></td><td><input type = "text"></td></tr>
+            </table>
+
+            </div>
+          </div>
     </mat-sidenav-content>
 </mat-sidenav-container>
 </div>  
